@@ -12,7 +12,8 @@
     "test": "run-s test:unit test:integration",
     "test:unit": "node test/mocha-run-suite.js \"test/unit/**/*.ts\"",
     "test:integration": "node test/mocha-run-suite.js \"test/integration/**/*.ts\"",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "bin": {
     "protoc-gen-ts": "bin/protoc-gen-ts"
@@ -33,6 +34,7 @@
     "google-protobuf": "^3.15.5"
   },
   "devDependencies": {
+    "@grpc/grpc-js": "^1.13.3",
     "@improbable-eng/grpc-web": "^0.9.1",
     "@types/chai": "^3.5.2",
     "@types/google-protobuf": "^3.15.0",
@@ -44,7 +46,6 @@
     "chai": "^3.5.0",
     "download-cli": "^1.1.1",
     "glob": "^7.1.4",
-    "grpc": "^1.24.6",
     "grpc-tools": "^1.11.1",
     "lodash": "^4.17.5",
     "lodash.isequal": "^4.5.0",
